@@ -1,0 +1,94 @@
+@import '../../index.scss';
+
+.Tabs {
+  width: 100%;
+  height: auto;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+  &__tab {
+    cursor: pointer;
+    padding: 0.85em;
+    margin: 0;
+    font-size: 1.25rem;
+    color: $clr-secondary;
+    border: 1px solid $clr-dark;
+    // border-radius: 10px;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2) inset,
+      0 0 1px 1px rgba(0, 0, 0, 0.4);
+    transform: scale(1);
+    transition: all 500ms ease-in-out;
+
+    &:hover,
+    &:focus {
+        color: $clr-accent;
+    }
+  }
+
+  &__tab.active {
+    color: $clr-primary;
+    box-shadow: 0 0 6px 3px rgba(0,0,0,0.6) inset;
+  }
+
+  &__history {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+
+
+    &--title {
+        overflow: hidden;
+        text-transform: uppercase;
+        margin: 0;
+        margin-top: 1em;
+        padding: 0;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em 2em;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__link {
+    border: 1px solid $clr-secondary;
+    padding: 0.5em 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $clr-light;
+    width: 5em;
+    margin: 1em 0.3em;
+    transition: all 500ms ease-in-out;
+
+    &:hover,
+    &:focus {
+        border: none;
+        background-color: $clr-primary;
+        color: $clr-dark;
+        font-family: $ff-heading;
+        font-weight: $fw-bolder;
+        
+    }
+  }
+}
+
+
+.TabContent {
+    padding: 0 1em;
+    text-align: center;
+    transition: all 500ms ease-in-out;
+}
