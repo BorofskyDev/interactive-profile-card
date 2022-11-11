@@ -85,7 +85,7 @@
 
     &:hover,
     &:focus {
-      box-shadow: 0 0 10px 3px rgba(0,0,0,0.6), 0 0 15px 4px rgba(0,0,0,0.9) inset;
+      box-shadow: 0 0 10px 3px rgba(0,0,0,0.6), 0 0 20px 4px rgba(0,0,0,0.9) inset;
       background-color: $clr-primary;
       color: $clr-accent;
       font-family: $ff-heading;
@@ -128,12 +128,13 @@
 
       &:hover,
       &:focus {
+        box-shadow: 0 0 20px 3px rgba(0,0,0,0.6) inset;
         background-color: $clr-primary;
         font-weight: $fw-bolder;
       }
 
       &:active {
-        box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.4) inset;
+        box-shadow: 0 0 40px 6px rgba(0, 0, 0, 0.4) inset;
         background-color: transparent;
       }
     }
