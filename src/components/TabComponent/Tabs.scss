@@ -71,22 +71,23 @@
 
   &__link {
     border: 1px solid $clr-secondary;
-    border-radius: 10px;
-    padding: 0.1em 1.5em;
+    border-radius: 50%;
+    padding: 1em;
+    font-size: 1.3em;
     display: flex;
     align-items: center;
     justify-content: center;
     color: $clr-light;
-    width: 6em;
+    box-shadow: 0 0 6px 2px rgba(0,0,0,0.6), 0 0 6px 2px rgba(0,0,0,0.6) inset;
     margin: 1em 0.3em;
     text-transform: uppercase;
     transition: all 500ms ease-in-out;
 
     &:hover,
     &:focus {
-      border: none;
+      box-shadow: 0 0 10px 3px rgba(0,0,0,0.6), 0 0 15px 4px rgba(0,0,0,0.9) inset;
       background-color: $clr-primary;
-      color: $clr-dark;
+      color: $clr-accent;
       font-family: $ff-heading;
       font-weight: $fw-bolder;
     }
