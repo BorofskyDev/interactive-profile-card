@@ -57,3 +57,18 @@ body {
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
+
+@media (min-width: 35em){
+  .Card{
+    width: 500px;
+    height: 800px;
+  }
+}
+
+@media (min-width: 55em){
+  .Card {
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 850px;
+  }
+}

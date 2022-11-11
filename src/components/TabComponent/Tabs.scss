@@ -111,6 +111,7 @@
         text-transform: uppercase;
         background: transparent;
         border: none;
+        color: $clr-secondary;
         box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.4);
         cursor: pointer;
         transition: all 500ms ease-in-out;
@@ -134,4 +135,14 @@
     padding: 0 1em;
     text-align: center;
     transition: all 500ms ease-in-out;
+}
+
+@media (min-width: 55em) {
+    .Tabs {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        
+    }
 }

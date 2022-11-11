@@ -1,5 +1,20 @@
 @import '../../index.scss';
 
 .Body-el {
-    display: flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    overflow: hidden;
+    
+  }
+}
+
+@media (min-width: 35em) {
+  .Body-el {
+    height: 100%;
+    width: 50%;
+  }
 }
