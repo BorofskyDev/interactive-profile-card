@@ -3,18 +3,17 @@
 .Tabs {
   width: 100%;
   height: auto;
-  display:flex;
+  padding: 1em 0;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
 
   &__nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    
-}
+  }
 
   &__tab {
     cursor: pointer;
@@ -23,21 +22,29 @@
     font-size: 1.25rem;
     color: $clr-secondary;
     border: 1px solid $clr-dark;
-    // border-radius: 10px;
     box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2) inset,
       0 0 1px 1px rgba(0, 0, 0, 0.4);
     transform: scale(1);
     transition: all 500ms ease-in-out;
 
+    &:first-child {
+      border-radius: 10px 0 0 10px;
+    }
+
+    &:last-child {
+      border-radius: 0 10px 10px 0;
+    }
+
     &:hover,
     &:focus {
-        color: $clr-accent;
+      color: $clr-accent;
     }
   }
 
   &__tab.active {
     color: $clr-primary;
-    box-shadow: 0 0 6px 3px rgba(0,0,0,0.6) inset;
+    box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.6) inset,
+      0 0 1px 1px rgba(0, 0, 0, 0.4);
   }
 
   &__history {
@@ -45,13 +52,12 @@
     display: flex;
     flex-direction: column;
 
-
     &--title {
-        overflow: hidden;
-        text-transform: uppercase;
-        margin: 0;
-        margin-top: 1em;
-        padding: 0;
+      overflow: hidden;
+      text-transform: uppercase;
+      margin: 0;
+      margin-top: 1em;
+      padding: 0;
     }
   }
 
@@ -65,23 +71,24 @@
 
   &__link {
     border: 1px solid $clr-secondary;
-    padding: 0.5em 1.5em;
+    border-radius: 10px;
+    padding: 0.1em 1.5em;
     display: flex;
     align-items: center;
     justify-content: center;
     color: $clr-light;
-    width: 5em;
+    width: 6em;
     margin: 1em 0.3em;
+    text-transform: uppercase;
     transition: all 500ms ease-in-out;
 
     &:hover,
     &:focus {
-        border: none;
-        background-color: $clr-primary;
-        color: $clr-dark;
-        font-family: $ff-heading;
-        font-weight: $fw-bolder;
-        
+      border: none;
+      background-color: $clr-primary;
+      color: $clr-dark;
+      font-family: $ff-heading;
+      font-weight: $fw-bolder;
     }
   }
 
@@ -92,57 +99,56 @@
     justify-content: center;
 
     &--input {
-        background: transparent;
-        border: none;
-        box-shadow: 0 0 4px 2px rgba(0,0,0,0.6) inset;
-        margin: 0.2em auto;
-        color: $clr-light;
-        padding: 0.1em 0.5em;
+      background: transparent;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.6) inset;
+      margin: 0.2em auto;
+      color: $clr-accent;
+      padding: 0.1em 0.5em;
 
-        &::placeholder{
-            color: $clr-accent;
-            text-align: center;
-        }
+      &::placeholder {
+        color: $clr-secondary;
+        text-align: center;
+      }
     }
 
     &--btn {
-        padding: 0.3em 1.3em;
-        margin: 1em;
-        text-transform: uppercase;
-        background: transparent;
-        border: none;
-        color: $clr-secondary;
-        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.4);
-        cursor: pointer;
-        transition: all 500ms ease-in-out;
+      padding: 0.5em 2em;
+      margin: 1em;
+      text-transform: uppercase;
+      background: transparent;
+      border: none;
+      border-radius: 10px;
+      color: $clr-secondary;
+      box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.4);
+      cursor: pointer;
+      transition: all 500ms ease-in-out;
 
-        &:hover,
-        &:focus {
-            background-color: $clr-primary;
-            font-weight: $fw-bolder;
-        }
+      &:hover,
+      &:focus {
+        background-color: $clr-primary;
+        font-weight: $fw-bolder;
+      }
 
-        &:active {
-            box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.4) inset;
-            background-color: transparent;
-        }
+      &:active {
+        box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.4) inset;
+        background-color: transparent;
+      }
     }
   }
 }
 
-
 .TabContent {
-    padding: 0 1em;
-    text-align: center;
-    transition: all 500ms ease-in-out;
+  padding: 0 1em;
+  text-align: center;
+  transition: all 500ms ease-in-out;
 }
 
 @media (min-width: 55em) {
-    .Tabs {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        
-        
-    }
+  .Tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
